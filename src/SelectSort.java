@@ -1,11 +1,11 @@
 public class SelectSort {
 
   public static void main(String[] args) {
-    int[] arr = {4,9,7,1,3,6,5};
+    // int[] arr = {4,9,7,1,3,6,5};
+    int[] arr = {4,9,7,1,3,6,5,2,0};
 
     findMinSwap(arr);
 
-    System.out.println("----");
     for (int i=0; i<arr.length; i++) {
       System.out.println(arr[i]);
     }
@@ -15,7 +15,7 @@ public class SelectSort {
 
     for (int i=0; i<arr.length; i++) {
       int min = arr[i];
-      int swapIndex = 0;
+      int swapIndex = i;
       for (int j=i; j<arr.length; j++) {
         if (arr[j] < min) {
           min = arr[j];
@@ -26,7 +26,6 @@ public class SelectSort {
       arr[i] = min;
       arr[swapIndex] = temp;
     }
-
     return arr;
   }
 }
